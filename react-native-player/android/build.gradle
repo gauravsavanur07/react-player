@@ -1,0 +1,29 @@
+apply plugin: 'com.android.library'
+
+def versions = project.hasProperty("versions") ? project.versions : [];
+
+def _reactNativeVersion = versions.reactNative ?: "+";
+def _compileSdkVersion = versions.compileSdkVersion ?: 23;
+def _buildToolsVersion = versions.buildToolsVersion ?: "23.0.1";
+def _minSdkVersion = versions.minSdkVersion ?: 16;
+def _targetSdkVersion = versions.targetSdkVersion ?: 22;
+
+android {
+    compileSdkVersion _compileSdkVersion
+    buildToolsVersion _buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion _minSdkVersion
+        targetSdkVersion _targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+    }
+}
+
+dependencies {
+    compile(name:'libvlc', ext:'aar')
+    compile "com.facebook.react:react-native:${_reactNativeVersion}"
+}

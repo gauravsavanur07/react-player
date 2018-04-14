@@ -1,0 +1,33 @@
+{
+  "name": "react-native-vlc",
+  "version": "1.0.1",
+  "description": "A <Video /> element for react-native for VLC",
+  "main": "Video.js",
+  "author": "Gaurav Savanur <gauravsavanur07@gmail.com> (https://code.videolan.org/gauravsavanur07/react-native-player)",
+  "files": [
+    "android/build.gradle",
+    "android/RCTVideo.iml",
+    "android/src/main/AndroidManifest.xml",
+    "android/src/main/res/values/styles.xml",
+    "android/src/main/java/com/stremio/react/ReactVLCPackage.java",
+    "android/src/main/java/com/stremio/react/ReactVideoViewManager.java",
+    "android/src/main/java/com/stremio/react/ReactVideoView.java",
+    "Video.js"
+  ],
+
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gauravsavanur07/react-native-player.git"
+  },
+  "devDependencies": {
+    "jest-cli": "0.2.1",
+    "eslint": "1.10.3",
+    "babel-eslint": "5.0.0-beta8",
+    "eslint-plugin-react": "3.16.1",
+    "eslint-config-airbnb": "4.0.0"
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "node_modules/.bin/eslint *.js"
+  }
+}
